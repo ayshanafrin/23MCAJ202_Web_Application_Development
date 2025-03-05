@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+<body>
+    <h2>FORM</h2>
+    <form >
+        <label for="name">Enter Name:</label>
+        <input type="text" id="name" name="Name" placeholder="Enter your Name" required>
+        <br><br>
+
+        <label for="email">Enter Email:</label>
+        <input type="email" id="email" placeholder="Enter your Mail" required>
+        <br><br>
+
+        <label for="phno">Enter Phone:</label> 
+        <input type="tel" id="tel" placeholder="Enter your Phone no" required>
+        <br><br>
+
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" placeholder="Enter your Password" required>
+        <br><br>
+
+        <label for="qualification">Select Qualification:</label>
+        <select id="qualification" name="qualification">   <!--for dropdown-->
+           <option value="10th">10th  </option>
+           <option value="12th">12th  </option>
+           <option value="UnderGraduation">UG </option>
+           <option value="post graduate">PG </object>
+        </select>
+        <br><br>
+
+        <label for="gender">Select Gender:</label>
+        <input type="radio" id="Male" name="gender" value="Male">
+        <label for="Male">Male</label>
+        <input type="radio" id="Female" name="gender" value="Female">
+        <label for="Female">Female</label>
+        <input type="radio" id="Others" name="gender" value="Others">
+        <label for="Others">Others</label>
+        <br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="40" placeholder="Enter your Message"></textarea>
+        <br><br>
+
+        <label for="dob">Date of birth:</label>
+        <input type="Date"  id="dob" name="dob">
+        <br><br>
+     
+        <!--to upload the file-->
+        <label for="resume">Upload a resume:</label>
+        <input type="file" id="resume" name="resume">
+        <br><br>
+
+        <!--to choose the favoraite color-->
+        <label for="color">Choose your favorite color:</label>
+        <input type="color" id="color" name="color">
+        <br><br>
+
+        <!--subscribe to newsletter-->
+        <label for="letter">Subsribe to newsletter:</label>
+        <input type="checkbox" id="letter" name="letter">
+        <br><br>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>
