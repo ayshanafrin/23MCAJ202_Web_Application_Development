@@ -1,0 +1,12 @@
+.external-style {
+    background: rgb(101, 155, 101);
+    color: rgb(39, 36, 36);
+    
+}
+.external-style h2{
+    text-decoration:underline;
+    font-size: 20px;
+}
+.external-style p{
+    font-size: 18px;
+}

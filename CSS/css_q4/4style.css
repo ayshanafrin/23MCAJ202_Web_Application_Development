@@ -1,0 +1,76 @@
+body{
+    background: linear-gradient(to right, #aee77f, #237c40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+
+}
+
+.stly{
+    background: white;
+    width: 350px;
+    padding: 25px;
+    border-radius: 9px;
+    box-shadow: 0px 5px 15px rgba(38, 136, 76, 0.2);
+    position: relative;
+}
+
+h3{
+    text-align: center;
+    color: #237c40;
+    font-size: 22px;
+}
+
+label {
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+input{
+    width: 98%;
+    padding: 5px;
+    background: transparent;
+
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    background: transparent;
+}
+
+.checkbox input {
+    width: auto;
+    margin-right: 10px;
+    margin-top: 12px;
+}
+
+button{
+    padding: 10px;
+    margin-top: 8px;
+    background: linear-gradient(to right, #2f8144, #1c5c31);
+    color: white;
+    width:80% ;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 32px;
+}
+
+logined{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.logined a {
+    color: #0072ff;
+    text-decoration: none;
+}

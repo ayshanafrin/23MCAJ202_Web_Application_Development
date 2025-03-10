@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Inline, Internal, and External</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: rgb(178, 230, 110);
+            font-family: Arial;
+            width: 100%;
+            padding: 10px 0;
+            
+        }
+        h1 {
+            text-align: center;
+            color: rgb(20, 16, 16);
+            text-shadow: 2px 2px 5px gray;
+            font-size: 36px;
+        }
+        .internal-style {
+            background-color: rgb(216, 142, 142);
+            color:rgb(29, 27, 27);
+            font-style: italic;
+            
+            
+        }
+        .internal-style p{
+            font-size: 18px;
+        }
+        .internal-style h2{
+            font-size: 20px;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+    </style>
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="3styles.css">
+
+</head>
+<body>
+
+    <h1 style="background: white;">Welcome to the exploration of 3 different kinds of Styles......!</h1>
+    <p style="size: 18px;background: white;">CSS provides three different ways to style a webpage: Inline, Internal, and External CSS.
+        Each method has its unique use case and impact on design and maintainability.</p>
+
+
+<!-- Inline CSS applied -->        
+    <div style="background-color: rgb(167, 135, 197);">  
+        <h2 style="color: rgb(19, 17, 17);text-decoration: underline;font-size: 20px;">INLINE STYLE SHEET</h2> 
+        <p style="color: rgb(19, 17, 17);font-size: 18px;">Inline CSS is applied directly to an element using the <code>style</code> attribute.</p>
+    </div>
+
+<!-- Internal CSS applied -->
+    <div class="internal-style">
+        <h2 class="underline">INTERNAL STYLE SHEET</h2> 
+        <p >Internal CSS is written inside the style tag within the head section.</p>
+    </div>
+
+<!-- External CSS applied -->
+    <div class="external-style">
+        <h2 >EXTERNAL STYLE SHEET</h2> 
+        <p>External CSS is stored in a separate file and linked to the HTML document using the <code>&lt;link&gt;</code> tag.</p>
+    </div>
+
+</body>
+</html>
