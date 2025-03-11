@@ -29,12 +29,7 @@ body{
     justify-content: center;
 }
 
-.left h4 {
-    color: gray;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 0;
-}
+
 
 .left h1 {
     font-size: 35px;
@@ -64,16 +59,13 @@ label {
     margin-top: 15px;
 }
 
-input, select, textarea {
+input, textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-top: 5px;
     font-size: 14px;
-}
-select {
-    cursor: pointer;
 }
 
 button {
