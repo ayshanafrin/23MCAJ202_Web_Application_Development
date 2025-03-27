@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html l>
+<head>
+    <title>Bg Color Change</title>
+    <style>
+        body{
+            text-align: center;
+            align-items: center;
+            padding-top: 100px;
+        }
+        button{
+            padding: 10px 20px ;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click Here To Change The Background Color!!!!</h1>
+    <button onclick="colorchange()">Change Color</button>
+
+    <script>
+
+        function colorchange() {
+
+         col= ["#A47864" ,"#FFBE98","#BB2649","#6667AB",
+         "#F5DF4D","#FF6F61" ,"#5F4B8B","#45B8AC","#9B2335"];
+
+         random = Math.floor(Math.random() * col.length);
+
+         document.body.style.backgroundColor = col[random];
+       
+    }
+    </script>
+</body>
+</html>

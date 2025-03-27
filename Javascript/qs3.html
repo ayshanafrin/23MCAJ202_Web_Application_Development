@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            background:linear-gradient(to right, #a30909, #dd6d5e) ;
+            display: flex;
+            justify-content: center;
+            padding-top: 80px;
+        }
+        p{
+            padding-left: 40px;
+            font-family: sans-serif;
+            font-size: 25px;
+            color: #faf5f5;
+            font-weight: bold;
+        
+        }
+        img{
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main" onmouseover="Change()" onmouseout="goback()">
+        <img id="img" src="/app1.jpg" alt="image is here..just u cant see">
+        <p id="text">Touch the RED Apple</p>
+    </div>
+    <script>
+        function Change(){
+            document.getElementById("img").src ="/app2.jpg";
+            document.getElementById("text").innerText="Ooops!...This is a GREEN Apple";
+        }
+
+        function goback(){
+            document.getElementById("img").src="/app1.jpg";
+            document.getElementById("text").innerText="Touch over the RED Apple";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Registration</title>
+    <style>
+        body{
+            background-color: rgb(197, 171, 218);
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form{
+            background-color: rgb(224, 223, 221);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            width: 360px;
+            padding: 20px;
+        }
+        h2{
+            color: rgb(48, 9, 85);
+            font-size: 30px;
+            font-family:  Arial, sans-serif;
+
+           
+        }
+        label{
+             font-family: Arial, sans-serif;
+             font-size: 15px;
+             align-self: flex-start;
+             margin-left: 20px;
+             color:#333;
+        }
+        input{
+            align-self:auto;
+            width: 90%;
+            border-radius: 6px;
+            font-size: 15px;
+            padding: 4px;
+            margin: 5px 0;
+            border: 1px solid #625669;
+
+
+        }
+        button{
+            width: 90%;
+            padding: 10px;
+            padding-bottom: 10px;
+            font-size: 16px;
+            background-color: rgb(48, 9, 85);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(30, 6, 55);
+        }
+    </style>
+    
+</head>
+<body>
+    <form name="jsform"  onsubmit="return validation()" method="post">
+    <h2>Registration</h2>
+    <label>FullName</label>
+    <input type="text"  id="fname" name="fname" placeholder="Enter your Nme:" required>
+     <br>
+
+    <label>Email</label>
+    <input type="email"  id="email" name="email" placeholder="Enter your Email:" required>
+    <br> 
+
+    <label>Phone No</label>
+    <input type="text" id="phone" name="phone" placeholder="Enter your Phno:" required>
+     <br>
+
+    <label> Password</label>
+    <input type="password" placeholder="Enter Your Password" required>
+    <br> 
+
+    <button type="submit">Register</button>
+    </form>  
+    
+    <script>
+        function validation() {
+            let name = document.forms["jsform"]["fname"].value;
+            let email = document.forms["jsform"]["email"].value;
+            let phone = document.forms["jsform"]["phone"].value;
+
+            let namePattern = /^[A-Za-z\s]+$/;  // Only letters and spaces
+            let phonePattern = /^[0-9]{10}$/;   //10 dogits
+
+
+            if (email == "") {
+                alert("Email must be filled.");
+                return false;
+
+            }
+            if (name == "" || !namePattern.test(name)) {
+                alert("Please enter a valid Name (letters only).");
+                return false;  
+            }    
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid 10-digit Phone Number.");
+                return false;
+            }
+            return true;    
+        
+    }
+    </script>
+
+</body>
+</html>
