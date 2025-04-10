@@ -1,0 +1,80 @@
+<?php
+// Database connection details
+$host = "localhost";
+$username = "roott";
+$password = "12345678";
+$database = "web"; // changed to 'web'
+
+$conn = new mysqli($host, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch data from 'info' table
+$sql = "SELECT id, name, age, gender, email FROM info";
+$result = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Info Table</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h2>User Info Table</h2>
+
+<?php
+if ($result->num_rows > 0) {
+    echo "<table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Email</th>
+            </tr>";
+    while($row = $result->fetch_assoc()) {
+        echo "<tr>
+                <td>". $row["id"] ."</td>
+                <td>". $row["name"] ."</td>
+                <td>". $row["age"] ."</td>
+                <td>". $row["gender"] ."</td>
+                <td>". $row["email"] ."</td>
+              </tr>";
+    }
+    echo "</table>";
+} else {
+    echo "<p style='text-align:center;'>No data found in the info table.</p>";
+}
+
+$conn->close();
+?>
+
+</body>
+</html>
